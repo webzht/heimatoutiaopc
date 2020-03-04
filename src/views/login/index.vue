@@ -17,7 +17,7 @@
         <!-- 2.2验证码 -->
         <el-form-item prop="code">
           <el-input v-model="loginForm.code" style="width:60%" placeholder="请输入验证码"></el-input>
-          <el-button style="width:32%;float:right" plain>发送验证码</el-button>
+          <el-button style="width:32%;float:right; background: rgba(255, 255, 255, 0.9);" plain>发送验证码</el-button>
         </el-form-item>
 
         <!-- 2.3协议 -->
@@ -27,13 +27,12 @@
 
         <!-- 2.4登录 -->
          <el-form-item>
-          <el-button @click="login" type="primary" style="width:100%" round>登录</el-button>
+          <el-button @click="login" type="primary" style="width:100%;background: rgba(64,158,255, 0.9);" round>登录</el-button>
          </el-form-item>
       </el-form>
     </el-card>
   </div>
 </template>
-
 <script>
 export default {
   data () {
@@ -119,7 +118,7 @@ export default {
   justify-content: center;
   align-items: center;
     .login-card {
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.3);
       width: 570px;
       height: 340px;
       padding: 0 50px;
@@ -127,8 +126,8 @@ export default {
       .login-logo {
         text-align: center;
       }
-      .el-input__inner {
-        background: rgba(255, 255, 255, 0.3);
+      /deep/ .el-input__inner {
+        background: rgba(255, 255, 255, 0.5);
       }
     }
   }
