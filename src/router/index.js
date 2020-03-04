@@ -1,3 +1,4 @@
+// 路由器
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/home'
@@ -19,6 +20,8 @@ const routes = [
     name: 'login',
     component: login
   }
+  // 按需加载 当需要用到该组件的时候才会请求
+  //  component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'
   // {
   //   path: '/about',
   //   name: 'About',
