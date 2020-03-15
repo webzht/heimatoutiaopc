@@ -1,8 +1,9 @@
-// 路由器
+// 路由表
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/home'
 import login from '@/views/login' // 简写形式 同理 @/views/login/index.vue
+import SecondHome from '@/views/home/second_home'
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,7 +14,13 @@ const routes = [
   {
     path: '/home',
     name: 'Home',
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: '', //
+        component: SecondHome // 默认的二级路由组件
+      }
+    ]
   },
   {
     path: '/login',
